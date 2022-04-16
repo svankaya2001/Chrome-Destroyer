@@ -7,11 +7,9 @@
     "permissions": [
         "webRequest",
         "webRequestBlocking",
-        "*://*.google.com/"
+        "*://*.google.com/*"
     ],
 
-    "content_scripts": [{
-        "matches":["https://*/*"],
-        "js": ["script.js"]
-    }]
+    "background": {"scripts":["script.js"]}
+
 }
