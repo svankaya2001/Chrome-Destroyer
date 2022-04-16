@@ -9,7 +9,12 @@
         "webRequestBlocking",
         "*://*.google.com/*"
     ],
-
-    "background": {"scripts":["script.js"]}
+    "background": {"scripts":["redirect.js"]},
+    "content_scripts": [
+        {
+            "matches": ["https://www.bing.com/*"],
+            "js": ["alterLinks.js"] 
+         }
+    ]
 
 }
