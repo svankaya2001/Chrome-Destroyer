@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Oi';
+    src: url('../font/Oi-Regular.ttf') format("truetype");
+}
+
+* {
+    font-family: 'Oi', cursive !important;
+}
+
+a:hover {
+    transform: scale(2);
+    position: absolute;
+    top: 0;
+}
+
