@@ -14,7 +14,7 @@
         "*://*.youtube.com/*",
         "storage"
     ],
-    "background": {"scripts":["redirect.js"]},
+    "background": {"scripts":["redirect.js", "soundEffect.js"]},
     "content_scripts": [
         {
             "matches": ["https://*/*"],
