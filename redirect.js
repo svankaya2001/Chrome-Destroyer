@@ -1,8 +1,12 @@
-let redirectUrls = ['https://www.youtube.com/watch?v=AWOyEIuVzzQ', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', 'https://www.wwe.com/superstars/john-cena']
+let redirectUrls = [
+  "https://www.youtube.com/watch?v=AWOyEIuVzzQ",
+  "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+  "https://www.wwe.com/superstars/john-cena",
+];
 let rickRollUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
 chrome.webRequest.onBeforeRequest.addListener(
-  function(details){
+  function (details) {
     if (redirectUrls.includes(details.url)) {
       return;
     }
@@ -12,15 +16,20 @@ chrome.webRequest.onBeforeRequest.addListener(
       let searchEnd = details.url.search("&");
       let searchTerm = details.url.substring(searchStart, searchEnd);
       // alert(searchTerm);
-      return {redirectUrl: "https://www.bing.com/" + searchTerm};
-    }
-    else {
-      return {redirectUrl: rickRollUrl};
+      return { redirectUrl: "https://www.bing.com/" + searchTerm };
+    } else {
+      return { redirectUrl: rickRollUrl };
     }
   },
   {
-    urls:["*://*.google.com/*", "*://*.duckduckgo.com/*", "*://*.yahoo.com/*", "*://*.baidu.com/*", "*://*.youtube.com/*"],
-    types: ['main_frame', 'sub_frame'],
+    urls: [
+      "*://*.google.com/*",
+      "*://*.duckduckgo.com/*",
+      "*://*.yahoo.com/*",
+      "*://*.baidu.com/*",
+      "*://*.youtube.com/*",
+    ],
+    types: ["main_frame", "sub_frame"],
   },
   ["blocking"]
 );
