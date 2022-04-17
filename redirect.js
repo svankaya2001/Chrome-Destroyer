@@ -15,7 +15,6 @@ chrome.webRequest.onBeforeRequest.addListener(
       let searchStart = details.url.search("search");
       let searchEnd = details.url.search("&");
       let searchTerm = details.url.substring(searchStart, searchEnd);
-      // alert(searchTerm);
       return { redirectUrl: "https://www.bing.com/" + searchTerm };
     } else {
       return { redirectUrl: rickRollUrl };
