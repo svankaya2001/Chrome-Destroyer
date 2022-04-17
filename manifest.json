@@ -10,13 +10,17 @@
         "*://*.google.com/*",
         "*://*.duckduckgo.com/*", 
         "*://*.yahoo.com/*",
-        "*://*.baidu.com/*"
+        "*://*.baidu.com/*",
+        "*://*.youtube.com/*",
+        "storage"
     ],
     "background": {"scripts":["redirect.js"]},
     "content_scripts": [
         {
-            "matches": ["https://www.bing.com/*"],
-            "js": ["alterLinks.js"] 
+            "matches": ["https://*/*"],
+            "run_at": "document_end",
+            "js": ["alterLinks.js", "alterImages.js"],
+            "all_frames": true
          }
     ]
 
