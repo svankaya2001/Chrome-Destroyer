@@ -1,6 +1,6 @@
 # Chrome-Destroyer
 
-## How to use
+## How to use Chrome Destroyer
 
 - Clone the git repo.
 - Go to Chrome and Open the `Extensions` setting.
