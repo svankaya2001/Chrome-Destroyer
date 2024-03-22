@@ -1,5 +1,13 @@
 # Chrome-Destroyer
 
+## What it does
+
+- Reroutes every google search to `bing.com`.
+- Changes every image on every website to an image of John Cena.
+- Rickrolls you on every link.
+- Changes the font to make the text completely unreadable.
+- Adds an explosion sounds effect on any tab event.
+
 ## How to use Chrome Destroyer
 
 - Clone the git repo.
